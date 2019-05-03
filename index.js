@@ -78,7 +78,7 @@ function DhtAccessory(log, config) {
 DhtAccessory.prototype = {
 
   getDHTTemperature: function(callback) {
-    sensor.read(22, this.gpio, function(err, temperature, humidity) {
+    sensor.read(11, this.gpio, function(err, temperature, humidity) {
       if (!err) {
         this.log("DHT Status: %s, Temperature: %s°C, Humidity: %s%", 0, roundInt(temperature), roundInt(humidity));
         this.log_event_counter = this.log_event_counter + 1;
