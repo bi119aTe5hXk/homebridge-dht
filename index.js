@@ -62,7 +62,7 @@ function DhtAccessory(log, config) {
   this.name_humidity = config.name_humidity || config.name;
   this.service = config.service || "dht22";
   this.gpio = config.gpio || "4";
-  this.refresh = config.refresh || "60"; // Every minute
+  this.refresh = config.refresh || "30"; // Every 30s
   this.storage = config['storage'] || "fs";
 
   // dhtExec = config.dhtExec || "dht22";
